@@ -10,5 +10,4 @@ $result = mysqli_query($conn, "INSERT INTO product (name,type,deskripsi,harga) V
 // $result = $mysqli->query($sql);
 // $data = $result->fetch_assoc();
 // echo json_encode($data, JSON_PRETTY_PRINT);
-
 ?>
