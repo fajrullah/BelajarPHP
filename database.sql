@@ -16,7 +16,6 @@ CREATE TABLE `detail_product` (
   `deskripsi_detail` varchar(100),
   `tanggl_dibuat` datetime,
   `tanggl_exp` datetime,
-  `deskripsi_detail` varchar(100),
   `berat_barang` int(11),
   `id_product` varchar(100),
   PRIMARY KEY  (`id_detail_product`)
