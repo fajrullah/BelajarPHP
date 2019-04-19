@@ -1,3 +1,18 @@
-Download Bootstrap 4
-Extract : CSS dan JS
-https://getbootstrap.com/docs/4.3/getting-started/download/
+1. Download FILE DI GITHUB
+2. cut file :
+
+bower_components
+css
+datatables
+dist
+js
+
+3. Paste to Folder  > belajar
+
+4. Error :
+
+a. tidak membaca Jquery / file nya salah/ tidak ada file
+b. tidak adanya bootsrap untuk datatables
+c. tidak support javascript
+
+5. 
