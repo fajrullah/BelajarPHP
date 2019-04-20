@@ -255,7 +255,7 @@
               </li>
             </ul>
           </li>
-          <!-- User Account: style can be found in dropdown.less -->
+          <!-- USER PROFILE-->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
@@ -306,6 +306,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
+  <!-- USER PROFILE 2-->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
