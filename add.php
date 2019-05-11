@@ -12,9 +12,12 @@
   <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- datepicker timepicker select2 icheck-->
   <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="plugins/iCheck/all.css">
+
   <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -23,7 +26,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
     <a class="btn btn-outline-primary" href="index.php">Go to Home</a>
     <br/><br/>
 
-    <form action="add.php" method="post" name="form1">
+    <form action="actionADD.php" method="post" name="form1" enctype="multipart/form-data">
      <div class="col-md-6">
         <div class="form-group">
             <input type="text" name="nama"  class="form-control" placeholder="Nama">
@@ -40,7 +43,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             </select>
         </div>
         <div class="form-group">
-        <textarea name="desc" class="form-control" placeholder="Deskripsi"></textarea>
+            <textarea name="desc" class="form-control" placeholder="Deskripsi"></textarea>
         </div>
         <div class="form-group">
             <input type="number" name="harga" class="form-control" placeholder="0">
@@ -57,17 +60,60 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         <div class="bootstrap-timepicker">
                 <div class="form-group">
                   <label>Time picker:</label>
-
                   <div class="input-group">
                     <input type="text" class="form-control timepicker" name="time_exp">
-
                     <div class="input-group-addon">
                       <i class="fa fa-clock-o"></i>
                     </div>
                   </div>
-                  <!-- /.input group -->
-                </div>
-                <!-- /.form group -->
+                </div> 
+        </div>
+        <div class="form-group">
+                <select class="form-control select2" multiple="multiple" data-placeholder="Warna Tersedia"
+                        style="width: 100%;" name="warna[]">
+                  <option value="Merah">Merah</option>
+                  <option value="Hitam">Hitam</option>
+                  <option value="Biru">Biru</option>
+                  <option value="Putih">Putih</option>
+                  <option value="Kuning">Kuning</option>
+                  <option value="Hijau">Hijau</option>
+                  <option value="Oranye">Oranye</option>
+                </select>
+        </div>
+        <div class="form-group">
+        <label>Kelengkapan : </label><br>
+            <label>
+                  <input type="checkbox" class="minimal-red" checked name="kelengkapan[]" value="Kartu Garansi">
+                   Kartu Garansi
+            </label><br>
+            <label>
+                  <input type="checkbox" class="minimal-red" name="kelengkapan[]" value="Dus / Kotak Box">
+                  Dus / Kotak Box
+            </label><br>
+            <label>
+                  <input type="checkbox" class="minimal-red" name="kelengkapan[]" value="Packaging , Bubble Wrap , Box">
+                  Packaging , Bubble Wrap , Box
+            </label><br>
+            <label>
+                  <input type="checkbox" class="minimal-red" name="kelengkapan[]" value="Geratis Biaya Kirim">
+                  Geratis Biaya Kirim
+            </label>
+        </div>
+        <div class="form-group">
+        <label>Garansi : </label><br>
+            <label>
+              <input type="radio" name="garansi" class="minimal-red" checked value="garansi">
+              Garansi
+            </label>
+            <label>
+              <input type="radio" name="garansi" class="minimal-red" value="tidak garansi">
+              Tidak ada Garansi
+            </label>
+        </div>
+        <div class="form-group">
+          <label>Upload Gambar</label>
+          <input type="file" name="image">
+          <p class="help-block">Upload Gambar Product</p>
         </div>
         <div class="form-group">
             <input type="submit" name="Submit" value="Add" class="btn-success">
@@ -75,21 +121,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
      </div>
     </form>
 
-    <?php
-
-    // Check If form submitted, insert form data into users table.
-    if(isset($_POST['Submit'])) {
-        $nama = $_POST['nama'];
-        $type = $_POST['type'];
-        $desc = $_POST['desc'];
-        $harga = $_POST['harga'];
-        $tanggal_exp = date("Y-m-d h:i:s", strtotime($_POST['tanggal_exp']." ".$_POST['time_exp']));
-        echo $tanggal_exp;
-        include_once("config.php");
-        $result = mysqli_query($conn, "INSERT INTO product (name,type,deskripsi,harga,tanggal_exp) VALUES('$nama','$type','$desc','$harga','$tanggal_exp')");
-        echo "User added successfully. <a href='index.php'>View Users</a>";
-    }
-    ?>
+ 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -98,13 +130,14 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="dist/js/adminlte.min.js"></script>
     <script src="dist/js/demo.js"></script>
-    <!-- select2 timepicker datepicker -->
+    <!-- select2 timepicker datepicker icheck-->
     <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="plugins/input-mask/jquery.inputmask.js"></script>
     <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
     <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="plugins/iCheck/icheck.min.js"></script>
     <script>
     $(function () {
         //inisialisasi select2
@@ -115,6 +148,10 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         })
         $('.timepicker').timepicker({
           showInputs: false
+        })
+        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+          checkboxClass: 'icheckbox_minimal-red',
+          radioClass   : 'iradio_minimal-red'
         })
     })
     </script>

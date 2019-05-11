@@ -13,18 +13,24 @@ https://getbootstrap.com/docs/4.0/components/alerts/
 
 3. Belajar menggunakan Dynamic , menggunakan Javascript
 
-4. Membuat Login , dan Hak akses
+4. Membuat Login , dan Hak akses / MD5 (hash)
 
-5. Membuat Dashboard setiap User
+5. Membuat Dashboard setiap User *
 
 6. Membuat User Profile
 
-7. Desain Halaman Login
+7. Desain Halaman Login *
 
-8. Merapihkan File Include
+8. Merapihkan File Include *
 
-9. Membuat CRUD semua jenis input type
+9. Membuat CRUD semua jenis input type, kecuali browse file/image
 
-10. Membuat CRUD sesuai dengan database
+10. Membuat CRUD sesuai dengan database / Membuat Dashboard / menu2 Dashboard
 
-10. Membuat Report dari Data / Excel / pdf
+11. Membuat Report dari Data / Excel / pdf
+
+12. 
+
+13. 
+
+14.
