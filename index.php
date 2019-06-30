@@ -52,6 +52,9 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             </div>
             <div class="box-body">
               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createModal">Tambah Data</button>
+
+              <a href="exportoxls.php" target="_blank"><button type="button" class="btn btn-info" >Expor to XLS</button>
+              </a>
             </div>
             <div class="box-body">
                  <table id="example1" class="table table-bordered table-striped">

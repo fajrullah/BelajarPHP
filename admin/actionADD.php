@@ -24,7 +24,7 @@
             $lokasi_file = $_FILES['image']['tmp_name'];
             $tipe_file   = $_FILES['image']['type'];
             $nama_file   = $_FILES['image']['name'];
-            $direktori   = "image/product/merchandise/$nama_file";
+            $direktori   = "image/profile/$nama_file";
           }
           include_once("config.php");
           $sql = "INSERT INTO product (name,type,deskripsi,harga,tanggal_exp,kelengkapan,garansi,warna,image_url) VALUES('$nama','$type','$desc','$harga','$tanggal_exp','$arr_kelengkapan','$garansi','$arr_warna','$direktori')";
