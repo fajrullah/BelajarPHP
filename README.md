@@ -1,6 +1,10 @@
 # Install Wordpress
 1. Download Wordpress
 https://id.wordpress.org/download/
+
+Pastikan : database sudah terbuat, sesuaikan dengan Username dan Password, apabila ada error wp-config, maka pada htdocs > wordpress diberikan akses Run Administrator agar bisa create/read files
+
+
 2. Download Insert - PHP
 https://id.wordpress.org/plugins/insert-php/
 
