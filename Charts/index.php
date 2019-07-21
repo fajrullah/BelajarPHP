@@ -9,7 +9,6 @@ $paramater = [];
 $paramaterLine = [];
 $paramaterDonut = [];
 $paramaterLineTotalPab = [];
-
 while($user_data = mysqli_fetch_array($result)) {
   array_push($paramaterDonut,array(
     'label' => $user_data['kode_anggaran'],
@@ -27,7 +26,6 @@ while($user_data = mysqli_fetch_array($result)) {
   ));
 }
 $total_pab = mysqli_query($conn, "SELECT *, SUM(pad) AS total_pad FROM `apbd` GROUP BY prov");
-
 while($user_data = mysqli_fetch_array($total_pab)) {
   array_push($paramaterLineTotalPab,array(
     'y' => $user_data['prov'],
@@ -72,10 +70,8 @@ Morris.Line({
   ykeys: ['a','b'],
   labels: ['Value']
 });
-
 Morris.Donut({
   element: 'mythirdchart',
   data: <?php echo $jsonDataDonut; ?>
 });
-
 </script>

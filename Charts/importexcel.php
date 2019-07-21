@@ -19,6 +19,5 @@ include 'config.php';
 	</tr>
 </table>
 </form>
-	
 </body>
 </html>
