@@ -1,5 +1,9 @@
 # Download Wordpress
+1. Download Wordpress
 https://id.wordpress.org/download/
+2. Download Insert - PHP
+https://id.wordpress.org/plugins/insert-php/
+
 
 # BelajarPHP
 Belajar PHP Pemula,
