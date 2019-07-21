@@ -8,6 +8,12 @@ Pastikan : database sudah terbuat, sesuaikan dengan Username dan Password, apabi
 2. Download Insert - PHP
 https://id.wordpress.org/plugins/insert-php/
 
+3. Bootstrap 4 
+
+https://getbootstrap.com/docs/4.0/getting-started/introduction/
+
+copy paste : CSS dan Javascript
+
 
 # BelajarPHP
 Belajar PHP Pemula,
