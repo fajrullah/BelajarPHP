@@ -1,3 +1,6 @@
+# Download Wordpress
+https://id.wordpress.org/download/
+
 # BelajarPHP
 Belajar PHP Pemula,
 
